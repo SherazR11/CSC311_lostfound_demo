@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - Campus Lost &amp; Found</title>
+</head>
+<body>
+
+<h1>Create an Account</h1>
+
+<p th:if="${error}" th:text="${error}" style="color: red;"></p>
+
+<form action="/register" method="post">
+  <p>
+    <label>Username:</label>
+    <input type="text" name="username" required>
+  </p>
+
+  <p>
+    <label>Password:</label>
+    <input type="password" name="password" required>
+  </p>
+
+  <button type="submit">Register</button>
+</form>
+
+<p>
+  Already have an account?
+  <a href="/login">Sign in</a>
+</p>
+
+</body>
+</html>
